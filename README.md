@@ -22,13 +22,19 @@ This repository contains a Python script for sentiment analysis and insights ext
     cd your-repository
     ```
 
-2. Open and run the `analyze_reviews.py` script:
+2. Install the dependencies
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Open and run the `analyze_reviews.py` script:
 
     ```bash
     python analyze_reviews.py
     ```
 
-3. View the results:
+4. View the results:
 
     The script will print the extracted positive aspects, negative aspects, and issues from the provided sample reviews.
 
@@ -41,6 +47,8 @@ The core functionality is provided by the `analyze_reviews.py` script. Here's a 
 - `extract_keywords(text, num_keywords=5)`: Utilizes the YAKE keyword extraction library to extract keywords from the text.
 
 - `extract_issues(text)`: Identifies issues based on specific keywords in the provided text.
+
+- `context_aware_sentiment_classification(keywords)`: Classifies keywords into positive or negative aspects based on their sentiment to improve the accuracy of insights by considering the sentiment of individual keywords.
 
 - `extract_insights(reviews)`: Iterates through a list of reviews, analyzes sentiment, and extracts positive aspects, negative aspects, and issues.
 
